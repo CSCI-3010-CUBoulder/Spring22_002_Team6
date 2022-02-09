@@ -28,7 +28,7 @@ std::vector<int> MatchVectors(std::vector<int> a, std::vector<int> b);
 // (16 = 2 * 2 * 2 * 2 * 1 -> 1, 7 -> 7, 26 = 2 * 13 -> 13, 52 = 2 * 2 * 13 -> 13)
 int RemoveTwos(int original) {
     while (original % 2 == 0) {
-        original == original / 2;
+        original = original / 2;
     }
     return original;
 }
