@@ -14,8 +14,8 @@ std::string RemoveFirstSubstring(std::string s1, std::string s2);
 // Joins all strings in a vector together, using the glue string in between them
 std::string Join(std::vector<std::string> pieces, std::string glue) {
     std::string j = "";
-    for (int i = 0; i < pieces.size() - 1; i++) {
-        j += pieces[i] + glue;
+    for (auto i = pieces.begin(); i != pieces.end()-1; i++) {
+        j += *i + glue;
     }
     return j + pieces.back();
 }
@@ -46,9 +46,9 @@ std::vector<bool> OddMask(std::vector<int>);
 int Sum(std::vector<int> nums)
 {
     int sum = 0;
-    for(int i = 0; i < nums.size(); i++)
+    for(auto i : nums)
     {
-        sum += nums[i];
+        sum += i;
     }
     return sum;
 }
@@ -105,7 +105,8 @@ double Product(std::vector<double> nums);
 
 // Adds an double n to each element of a given vector
 std::vector<double> VectorPlusN(std::vector<double> v, double n) {
-    for (int i = 0; i < v.size(); i++) {
+    int v_size = v.size();
+    for (int i = 0; i < v_size; i++) {
         v[i] += n;
     }
     return v;

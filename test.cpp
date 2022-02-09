@@ -1,5 +1,5 @@
 #define CATCH_CONFIG_MAIN
-#include "Catch.hpp"
+#include "catch.hpp"
 #include "functions_to_implement.cpp"
 
 TEST_CASE("Joining Strings", "[join]") {
